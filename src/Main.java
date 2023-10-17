@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,15 +9,16 @@ public class Main {
          ! = (NOT) reverses boolean value of condition
         */
 
-        byte temperature = 25;
+        Scanner sc =  new Scanner(System.in);
 
-        if (temperature > 30) {
-            System.out.println("It is hot outside");
-        } else if (temperature >= 20 && temperature <=30) {
-            System.out.println("It is warm outside");
+        System.out.println("You are playing a game! Press q or Q to quit");
+        char response = sc.next().charAt(0);
+
+        if (response == 'q' || response == 'Q'){
+            System.out.println("You quit the game");
         }
-        else {
-            System.out.println("it is cold outside");
+        else{
+            System.out.println("You are still playing the game *pew pew*");
         }
 
     }
