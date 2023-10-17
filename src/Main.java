@@ -1,29 +1,23 @@
 
 public class Main {
     public static void main(String[] args) {
+        /*
+         Logical operators = used to connect two or more expressions
+         && = (AND) both conditions must be true
+         || = (OR) either condition must be true
+         ! = (NOT) reverses boolean value of condition
+        */
 
-        // switch = statement that allows a variable to be tested for equality against a list of values
+        byte temperature = 25;
 
-        String day = "Sunday";
-
-        switch (day){
-            case "Sunday": System.out.println("It is Sunday");
-                break;
-            case "Monday": System.out.println("It is Monday");
-                break;
-            case "Tuesday": System.out.println("It is Tuesday");
-                break;
-            case "Wednesday": System.out.println("It is Wednesday");
-                break;
-            case "Thursday": System.out.println("It is Thursday");
-                break;
-            case "Friday": System.out.println("It is Friday");
-                break;
-            case "Saturday": System.out.println("It is Saturday");
-                break;
-            default: System.out.println("No value for this day entry");
-                break;
-
+        if (temperature > 30) {
+            System.out.println("It is hot outside");
+        } else if (temperature >= 20 && temperature <=30) {
+            System.out.println("It is warm outside");
         }
+        else {
+            System.out.println("it is cold outside");
+        }
+
     }
 }
