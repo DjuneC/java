@@ -1,14 +1,19 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String name = JOptionPane.showInputDialog("What is your name ? ");
-        JOptionPane.showMessageDialog(null, "Hello " + name);
+        Scanner sc = new Scanner(System.in);
 
-        byte age = Byte.parseByte(JOptionPane.showInputDialog("What is your age ? "));
-        JOptionPane.showMessageDialog(null, "You are " + age + " years old!");
+        System.out.println("Enter side x: ");
+        float sideX = sc.nextFloat();
 
-        float height = Float.parseFloat(JOptionPane.showInputDialog(null,"What is your height ? "));
-        JOptionPane.showMessageDialog(null, "You are " + height + " cm tall.");
+        System.out.println("Enter side y: ");
+        float sideY = sc.nextFloat();
+
+        float result = (float) Math.sqrt((sideX * sideX) + (sideY * sideY));
+
+        System.out.println("The hypotenuse of the triangle is: " + result);
+
+        sc.close();
     }
 }
