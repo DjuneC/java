@@ -7,10 +7,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String name = "";
 
-        while(name.isBlank()){
+        do{
             System.out.println("What is your name ? ");
             name = sc.nextLine();
-        }
+        }while(name.isBlank());
 
         System.out.println("Hello " + name);
     }
