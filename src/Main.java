@@ -1,20 +1,20 @@
 
 public class Main {
     public static void main(String[] args) {
+        // String = a reference data type that can store one or more characters
+        // reference data type have access to useful methods
 
-       // 2D array = An array of arrays
+        String name = "Cesar";
 
-        String[][] cars = {
-                {"Camaro", "Corvette", "Silverado"},
-                {"Mustang", "Ranger", "F-150"},
-                {"Ferrari", "Lamborghini", "Tesla"}
-        };
-
-        for (int i = 0; i < cars.length; i++){
-            for (int j = 0; j < cars[i].length; j++){
-                System.out.print(cars[i][j] + " ");
-            }
-            System.out.println();
-        }
+//        boolean result = name.equals("Cesar");
+//        int result = name.length();
+//        char result = name.charAt(0);
+//        int result = name.indexOf("B");
+//        boolean result = name.isEmpty();
+//        String result = name.toUpperCase();
+//        String result = name.toLowerCase();
+//        String result = name.trim();
+        String result = name.replace("s", "z");
+        System.out.println(result);
     }
 }
