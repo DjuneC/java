@@ -14,11 +14,11 @@ public class Main {
         System.out.println("You are playing a game! Press q or Q to quit");
         char response = sc.next().charAt(0);
 
-        if (response == 'q' || response == 'Q'){
-            System.out.println("You quit the game");
+        if (!(response == 'q') && !(response == 'Q')){
+            System.out.println("You are still playing the game *pew pew*");
         }
         else{
-            System.out.println("You are still playing the game *pew pew*");
+            System.out.println("You quit the game");
         }
 
     }
