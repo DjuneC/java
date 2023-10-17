@@ -2,24 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-         Logical operators = used to connect two or more expressions
-         && = (AND) both conditions must be true
-         || = (OR) either condition must be true
-         ! = (NOT) reverses boolean value of condition
-        */
+        // while loop = executes a block of code as long as its condition remains true
 
-        Scanner sc =  new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        String name = "";
 
-        System.out.println("You are playing a game! Press q or Q to quit");
-        char response = sc.next().charAt(0);
-
-        if (!(response == 'q') && !(response == 'Q')){
-            System.out.println("You are still playing the game *pew pew*");
-        }
-        else{
-            System.out.println("You quit the game");
+        while(name.isBlank()){
+            System.out.println("What is your name ? ");
+            name = sc.nextLine();
         }
 
+        System.out.println("Hello " + name);
     }
 }
