@@ -1,13 +1,11 @@
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        final double PI = 3.14569;
+        //OOP
+        // object = an instance of class that may contain attributes and methods
+        // example: (phone, desk, computer, coffee, cup)
 
-        // when you declare a variable with the keyword final
-        // you cannot reassign it later on
-
-        // below code will produce an error
-        PI = 12;
+        Car myCar = new Car();
+        System.out.println(myCar.model);
     }
 }
