@@ -1,17 +1,22 @@
 
 public class Main {
     public static void main(String[] args) {
-        // toString() = special method that all objects inherit,
-        //            that returns a string that "textually represents" an object.
-        //            can be used both implicitly and explicitly
+        int[] numbers = new int[3];
+        char[] characters = new char[4];
+        String[] strings = new String[5];
 
-        Car car = new Car("Ford", "Mustang", "Red", 2023);
+//        Food[] refrigerator = new Food[3];
 
-//        System.out.println(car.make);
-//        System.out.println(car.model);
-//        System.out.println(car.color);
-//        System.out.println(car.year);
+        Food food1 = new Food("Pizza");
+        Food food2 = new Food("Hamburger");
+        Food food3 = new Food("Hot-Dog");
 
-        System.out.println(car);
+        Food[] refrigerator = {food1, food2,food3};
+
+//        refrigerator[0] = food1;
+//        refrigerator[1] = food2;
+//        refrigerator[2] = food3;
+
+        System.out.println(refrigerator[0].name);
     }
 }
