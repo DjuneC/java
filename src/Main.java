@@ -2,23 +2,32 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        // 2D ArrayList = a dynamic list of lists
+        // You can change the size of these lists during runtime
 
-        //ArrayList =  a resizable array.
-        //             Elements can be added and removed after compilation phase
-        //             store reference types
-        ArrayList<String> food = new ArrayList<String>();
+        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
 
-        food.add("pizza");
-        food.add("hamburger");
-        food.add("hot-dog");
+        ArrayList<String> bakeryList = new ArrayList<String>();
 
-        // some useful methods on n arraylist
-        food.set(0, "sushi");
-        food.remove(2);
-        food.clear();
+        bakeryList.add("pasta");
+        bakeryList.add("garlic breads");
+        bakeryList.add("donuts");
 
-        for(int i = 0; i <  food.size(); i++){
-            System.out.println(food.get(i));
-        }
+        ArrayList<String> productsList = new ArrayList<String>();
+
+        productsList.add("tomatoes");
+        productsList.add("zucchini");
+        productsList.add("peppers");
+
+        ArrayList<String> drinksList = new ArrayList<String>();
+
+        drinksList.add("soda");
+        drinksList.add("coffee");
+
+        groceryList.add(bakeryList);
+        groceryList.add(productsList);
+        groceryList.add(drinksList);
+
+        System.out.println(groceryList.get(0).get(2));
     }
 }
