@@ -2,32 +2,24 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // 2D ArrayList = a dynamic list of lists
-        // You can change the size of these lists during runtime
+        // for-each = traversing technique to iterate through the elements in an array/collection
+        // less steps, more readable
+        // less flexible
 
-        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
+        String[] animals = {"cat", "dog", "rat", "bird"};
+        ArrayList<String> animalsArrayList = new ArrayList<String>();
 
-        ArrayList<String> bakeryList = new ArrayList<String>();
+        animalsArrayList.add("cat");
+        animalsArrayList.add("dog");
+        animalsArrayList.add("rat");
+        animalsArrayList.add("bird");
 
-        bakeryList.add("pasta");
-        bakeryList.add("garlic breads");
-        bakeryList.add("donuts");
+        for(String animal: animals){
+            System.out.println(animal.toUpperCase());
+        }
 
-        ArrayList<String> productsList = new ArrayList<String>();
-
-        productsList.add("tomatoes");
-        productsList.add("zucchini");
-        productsList.add("peppers");
-
-        ArrayList<String> drinksList = new ArrayList<String>();
-
-        drinksList.add("soda");
-        drinksList.add("coffee");
-
-        groceryList.add(bakeryList);
-        groceryList.add(productsList);
-        groceryList.add(drinksList);
-
-        System.out.println(groceryList.get(0).get(2));
+        for(String animal: animalsArrayList){
+            System.out.println(animal.toUpperCase());
+        }
     }
 }
