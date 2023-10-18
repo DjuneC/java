@@ -1,16 +1,17 @@
 
 public class Main {
     public static void main(String[] args) {
-        // overload constructors = multiple constructors within a class with the same name,
-        //                       but have different parameters
-        //                       name + parameters = signature
+        // toString() = special method that all objects inherit,
+        //            that returns a string that "textually represents" an object.
+        //            can be used both implicitly and explicitly
 
-        Pizza pizza = new Pizza("thick crust", "tomato", "mozzarella", "pepperoni");
+        Car car = new Car("Ford", "Mustang", "Red", 2023);
 
-        System.out.println("Here are the ingredients of your pizza!");
-        System.out.println(pizza.bread);
-        System.out.println(pizza.sauce);
-        System.out.println(pizza.cheese);
-        System.out.println(pizza.topping);
+//        System.out.println(car.make);
+//        System.out.println(car.model);
+//        System.out.println(car.color);
+//        System.out.println(car.year);
+
+        System.out.println(car);
     }
 }
