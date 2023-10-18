@@ -1,11 +1,12 @@
 
 public class Main {
     public static void main(String[] args) {
-        // constructor = special method that is called when an object is instantiated (created)
-        Human human = new Human("Ces", 24, 50);
-        Human human1 = new Human("Ceze", 22, 70);
+        // local = declared inside a method
+        //       visible only to that method
 
-        System.out.println(human1.name);
-        human.drink();
+        //global = declared outside a method, but within a class
+        //       visible to all parts of a class
+
+        DiceRoller diceRoller = new DiceRoller();
     }
 }
