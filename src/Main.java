@@ -2,24 +2,13 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // for-each = traversing technique to iterate through the elements in an array/collection
-        // less steps, more readable
-        // less flexible
+        // method = a block of code that is executed whenever it is called upon
+        String name = "Cesar";
+        byte age = 24;
+        hello(name, age);
+    }
 
-        String[] animals = {"cat", "dog", "rat", "bird"};
-        ArrayList<String> animalsArrayList = new ArrayList<String>();
-
-        animalsArrayList.add("cat");
-        animalsArrayList.add("dog");
-        animalsArrayList.add("rat");
-        animalsArrayList.add("bird");
-
-        for(String animal: animals){
-            System.out.println(animal.toUpperCase());
-        }
-
-        for(String animal: animalsArrayList){
-            System.out.println(animal.toUpperCase());
-        }
+    static void hello(String name, byte age){
+        System.out.println("Hello " + name + " you are " + age + " years old");
     }
 }
