@@ -1,20 +1,27 @@
 
 public class Main {
     public static void main(String[] args) {
-        // String = a reference data type that can store one or more characters
-        // reference data type have access to useful methods
+        /*
+         wrapper class = provides a way to use primitive data types a reference data types
+         references data types contain useful methods
+         can be used with collections (ex. ArrayList)
 
-        String name = "Cesar";
+         primitive     wrapper
+         * boolean     Boolean
+         * char        Character
+         * int         Integer
+         * double      Double
 
-//        boolean result = name.equals("Cesar");
-//        int result = name.length();
-//        char result = name.charAt(0);
-//        int result = name.indexOf("B");
-//        boolean result = name.isEmpty();
-//        String result = name.toUpperCase();
-//        String result = name.toLowerCase();
-//        String result = name.trim();
-        String result = name.replace("s", "z");
-        System.out.println(result);
+         autoboxing = the automatic conversion that the Java compiler makes between the primitive data types and their corresponding object wrapper classes
+         unboxing = the reverse of autoboxing. Automatic conversion of wrapper class to primitive
+        */
+
+        Boolean a = true;
+        Character b = '@';
+        Integer c = 123;
+        Double d = 3.14;
+        String e = "Bro";
+
+        System.out.println(a);
     }
 }
