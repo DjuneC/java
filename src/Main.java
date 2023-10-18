@@ -1,27 +1,24 @@
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-         wrapper class = provides a way to use primitive data types a reference data types
-         references data types contain useful methods
-         can be used with collections (ex. ArrayList)
 
-         primitive     wrapper
-         * boolean     Boolean
-         * char        Character
-         * int         Integer
-         * double      Double
+        //ArrayList =  a resizable array.
+        //             Elements can be added and removed after compilation phase
+        //             store reference types
+        ArrayList<String> food = new ArrayList<String>();
 
-         autoboxing = the automatic conversion that the Java compiler makes between the primitive data types and their corresponding object wrapper classes
-         unboxing = the reverse of autoboxing. Automatic conversion of wrapper class to primitive
-        */
+        food.add("pizza");
+        food.add("hamburger");
+        food.add("hot-dog");
 
-        Boolean a = true;
-        Character b = '@';
-        Integer c = 123;
-        Double d = 3.14;
-        String e = "Bro";
+        // some useful methods on n arraylist
+        food.set(0, "sushi");
+        food.remove(2);
+        food.clear();
 
-        System.out.println(a);
+        for(int i = 0; i <  food.size(); i++){
+            System.out.println(food.get(i));
+        }
     }
 }
