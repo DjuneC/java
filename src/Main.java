@@ -2,13 +2,26 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // method = a block of code that is executed whenever it is called upon
-        String name = "Cesar";
-        byte age = 24;
-        hello(name, age);
+        // overload methods = methods that share the same name but have different parameters
+        // method name + name = method signature
+
+        int x = add(12, 12, 14, 25);
+
+        System.out.println(x);
     }
 
-    static void hello(String name, byte age){
-        System.out.println("Hello " + name + " you are " + age + " years old");
+    static int add(int a, int b){
+        System.out.println("This is overloaded method #1");
+        return a + b;
+    }
+
+    static int add(int a, int b, int c){
+        System.out.println("This is overloaded method #2");
+        return a + b + c;
+    }
+
+    static int add(int a, int b, int c, int d){
+        System.out.println("This is overloaded method #3");
+        return a + b + c + d;
     }
 }
