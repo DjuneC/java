@@ -1,12 +1,12 @@
 
 public class Main {
     public static void main(String[] args) {
-        // super = keyword refers to the superclass (parent) of an object
-        //         very similar to the "this" keyword
+        // abstract = abstract classes cannot be instantiated, but they can have a subclass
+        //            abstract methods are declared without an implementation
 
-        Hero hero = new Hero("Batman", 42, "$$$");
-        Hero hero1 = new Hero("Superman", 43, "Everything");
-
-        System.out.println(hero);
+        //public means it is accessible in the world project
+        //private means it is accessible only inside the class it was defined
+        //protected means it is accessible inside the class it was defined and also the subclass
+        //lastly we have the default access modifier which make it available within the package it is
     }
 }
