@@ -32,4 +32,10 @@ public class Car {
     public void setYear(int year){
         this.year = year;
     }
+
+    public void copy(Car car){
+        this.setMake(car.getMake());
+        this.setModel(car.getModel());
+        this.setYear(car.getYear());
+    }
 }
