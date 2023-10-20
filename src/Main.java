@@ -4,9 +4,8 @@ public class Main {
     public static void main(String[] args) {
         // exception = an event that occurs during the execution of a program that,
         //             disrupts the normal flow of instructions
-        Scanner scanner = new Scanner(System.in);
 
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter a number to divide: ");
             int firstNumber = scanner.nextInt();
 
@@ -18,10 +17,8 @@ public class Main {
             System.out.println("Result: " + result);
         } catch (ArithmeticException e) {
             System.out.println("It is forbidden to divide by zero!");
-        } catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("You have entered some invalid input (Number only)");
-        } finally {
-            scanner.close();
         }
     }
 }
