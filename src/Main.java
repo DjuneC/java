@@ -1,24 +1,19 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
-        // exception = an event that occurs during the execution of a program that,
-        //             disrupts the normal flow of instructions
+       // file = An abstract representation of file and directory pathnames
 
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Enter a number to divide: ");
-            int firstNumber = scanner.nextInt();
+        File file = new File("secret_message.txt");
 
-            System.out.println("Enter a number to divide by: ");
-            int secondNumber = scanner.nextInt();
-
-            int result = firstNumber / secondNumber;
-
-            System.out.println("Result: " + result);
-        } catch (ArithmeticException e) {
-            System.out.println("It is forbidden to divide by zero!");
-        } catch (InputMismatchException e) {
-            System.out.println("You have entered some invalid input (Number only)");
+        if(file.exists()){
+            System.out.println("That file exists :0!");
+            System.out.println(file.getPath());
+            System.out.println(file.getAbsolutePath());
+            System.out.println(file.isFile());
+//            file.delete();
+        } else {
+            System.out.println("That file doesn't exist :(");
         }
     }
 }
