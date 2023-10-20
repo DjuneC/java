@@ -1,19 +1,15 @@
-import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-       // file = An abstract representation of file and directory pathnames
-
-        File file = new File("secret_message.txt");
-
-        if(file.exists()){
-            System.out.println("That file exists :0!");
-            System.out.println(file.getPath());
-            System.out.println(file.getAbsolutePath());
-            System.out.println(file.isFile());
-//            file.delete();
-        } else {
-            System.out.println("That file doesn't exist :(");
+        try{
+            FileWriter writer = new FileWriter("poem.txt");
+            writer.write("Roses are red \n");
+            writer.append("Violets are blue \n");
+            writer.close();
+        }catch (IOException e) {
+            System.out.println("Something went wrong while working on the file!");
         }
     }
 }
