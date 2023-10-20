@@ -1,28 +1,27 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        // polymorphism = many shapes/forms
-        // dynamic = after compilation (during runtime)
-
-        // ex. A corvette is a: corvette, and a car, and a vehicle, and an object
-
+        // exception = an event that occurs during the execution of a program that,
+        //             disrupts the normal flow of instructions
         Scanner scanner = new Scanner(System.in);
-        Animal animal;
 
-        System.out.println("What animal do you want?");
-        System.out.print("1=dog & 2=cat: ");
-        int choice = scanner.nextInt();
+        try {
+            System.out.println("Enter a number to divide: ");
+            int firstNumber = scanner.nextInt();
 
-        if (choice == 1){
-            animal = new Dog();
-            animal.speak();
-        } else if (choice == 2) {
-            animal = new Cat();
-            animal.speak();
-        }else{
-            animal = new Animal();
-            animal.speak();
+            System.out.println("Enter a number to divide by: ");
+            int secondNumber = scanner.nextInt();
+
+            int result = firstNumber / secondNumber;
+
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("It is forbidden to divide by zero!");
+        } catch (InputMismatchException e){
+            System.out.println("You have entered some invalid input (Number only)");
+        } finally {
+            scanner.close();
         }
     }
 }
