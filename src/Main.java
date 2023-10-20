@@ -1,11 +1,28 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //interface = a template that can be applied to a class.
-        //            similar to inheritance, but specifies what a class has/must do.
-        //            classes can apply more than one interface, inheritance is limited to 1 super class
+        // polymorphism = many shapes/forms
+        // dynamic = after compilation (during runtime)
 
-        Rabbit rabbit = new Rabbit();
-        rabbit.flee();
+        // ex. A corvette is a: corvette, and a car, and a vehicle, and an object
+
+        Scanner scanner = new Scanner(System.in);
+        Animal animal;
+
+        System.out.println("What animal do you want?");
+        System.out.print("1=dog & 2=cat: ");
+        int choice = scanner.nextInt();
+
+        if (choice == 1){
+            animal = new Dog();
+            animal.speak();
+        } else if (choice == 2) {
+            animal = new Cat();
+            animal.speak();
+        }else{
+            animal = new Animal();
+            animal.speak();
+        }
     }
 }
