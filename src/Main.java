@@ -1,26 +1,40 @@
-import javax.imageio.IIOException;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import javax.sound.sampled.*;
+import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        // FileReader = read the contents of a file as a stream of characters. One by one
-        //              read() returns an int value which contains the byte value
-        //              when read() returns -1, there is no more data to be read.
-        try {
-            FileReader fileReader = new FileReader("art.txt");
-            int data = fileReader.read();
+    public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("FlyingTrackTribe.wav");
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
 
-            while(data != -1){
-                System.out.print((char)data);
-                data = fileReader.read();
+
+        Scanner scanner = new Scanner(System.in);
+
+        String response = "";
+
+
+        while(!response.equals("Q")){
+            System.out.println("P = Play, S = Stop, R = Reset, Q = Quit");
+
+            response = scanner.next();
+            response = response.toUpperCase();
+
+            switch (response){
+                case "P": clip.start();
+                break;
+                case "S": clip.stop();
+                break;
+                case "R": clip.setMicrosecondPosition(0);
+                break;
+                case "Q": clip.close();
+                break;
+                default: System.out.println("Not a valid choice!");
             }
-            fileReader.close();
-        }
-        catch (IOException ioException){
-            System.out.print("File doest not exists!");
         }
 
+        System.out.println("Byeeee");
     }
 }
