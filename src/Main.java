@@ -1,15 +1,26 @@
-import java.io.FileWriter;
+import javax.imageio.IIOException;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        try{
-            FileWriter writer = new FileWriter("poem.txt");
-            writer.write("Roses are red \n");
-            writer.append("Violets are blue \n");
-            writer.close();
-        }catch (IOException e) {
-            System.out.println("Something went wrong while working on the file!");
+        // FileReader = read the contents of a file as a stream of characters. One by one
+        //              read() returns an int value which contains the byte value
+        //              when read() returns -1, there is no more data to be read.
+        try {
+            FileReader fileReader = new FileReader("art.txt");
+            int data = fileReader.read();
+
+            while(data != -1){
+                System.out.print((char)data);
+                data = fileReader.read();
+            }
+            fileReader.close();
         }
+        catch (IOException ioException){
+            System.out.print("File doest not exists!");
+        }
+
     }
 }
